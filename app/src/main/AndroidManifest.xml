@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yaseen.therevolutionarystep">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/trslogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TheRevolutionaryStep">
+        <activity android:name=".Score_Page"></activity>
+        <activity android:name=".Quiz_Page" />
+        <activity
+            android:name=".Forgot_Password"
+            android:parentActivityName=".LoginActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".SignupActivity"
+            android:parentActivityName=".LoginActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MyFirebaseService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"></action>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_baseline_notifications_24"
+            ></meta-data>
+
+    </application>
+
+</manifest>
